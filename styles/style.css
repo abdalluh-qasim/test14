@@ -1,0 +1,666 @@
+/* الأساسيات */
+body {
+    font-family: Arial, sans-serif;
+    background-color: linear-gradient(45deg, #55b5d3, #00457c);
+    color: #333;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+/* تخصيص النص داخل رأس الصفحة */
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-around; /* توزيع العناصر بين اليمين واليسار */
+    background: linear-gradient(-45deg, #88d5ff, #fc2525, #0b0089, #1231fc);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    padding: 0px;
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    position: relative;
+    text-align: center;
+
+    border-bottom: 1px solid #0b0089; /* اللون والسُمك */
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header h1 {  
+    font-family: "Amiri", serif;
+font-size: 110%;
+
+
+}
+
+
+
+
+
+header p {  
+      font-family: "Katibeh", serif;
+font-size: 200%;
+margin-top: -15px;
+}
+header p:hover {
+    color: 
+    
+    
+
+    
+    
+    #cfcbcb; /* تغيير لون النص عند التمرير عليه */
+    transform: scale(1.107); /* تكبير النص عند التمرير عليه */
+    transition: all 1.2s ease; /* تأثير التحول بشكل ناعم */
+}
+header h1:hover {
+    color: 
+    
+    
+
+    
+    
+    #cfcbcb; /* تغيير لون النص عند التمرير عليه */
+    transform: scale(1.17); /* تكبير النص عند التمرير عليه */
+    transition: all 1.2s ease; /* تأثير التحول بشكل ناعم */
+     
+
+}
+
+
+
+
+
+
+/* تخصيص الشعار */
+header .logo {
+    display: flex;
+    align-items: center; /* محاذاة عمودية */
+    justify-content: center; /* محاذاة أفقية */
+    
+
+}
+
+header .logo-left img, header .logo-right img {
+    max-width: 80px;
+    border-radius: 50%;
+    
+    
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+margin-left: auto;
+
+}
+
+header .logo-left img:hover, header .logo-right img:hover {
+    transform: scale(1.14);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* الشعار الأيسر */
+header .logo-left {
+    display: flex;
+    justify-content:left;
+}
+
+/* الشعار الأيمن */
+header .logo-right {
+    display: flex;
+    justify-content:right;
+}
+
+
+
+
+ الخيارات 
+
+
+/* تنسيق القائمة الرئيسية */
+nav {
+    background: linear-gradient(45deg, #1cafc9, #8d44ad);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: "Katibeh", serif
+}
+
+/* تنسيق القائمة الرئيسية */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-45deg, #88d5ff, #9b25fc, #0b0089, #1231fc);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    border-radius: 0px 0px 15px 15px;
+}
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* تنسيق العناصر */
+nav li {
+    position: relative; /* للسماح بالقائمة المنسدلة بالتمركز */
+    margin: 0 25px;
+}
+
+/* تنسيق الروابط */
+nav a {
+    display: block;
+    padding: 15px 40px;
+    color: rgb(255, 255, 255);
+    font-family: "Katibeh", serif;
+    font-size: 25px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #2575fc, #fc2525);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* التأثير عند التفاعل */
+nav a:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: scale(1.1);
+    color: #f0f0f0;
+}
+
+/* القائمة المنسدلة */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* تظهر أسفل العنصر الأب */
+    left: 0;
+    background-color: #2a3f53;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+    z-index: 10;
+}
+
+/* العناصر في القائمة المنسدلة */
+nav ul ul li {
+    display: block;
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* الروابط داخل القائمة المنسدلة */
+nav ul ul a {
+    background: none;
+    padding: 10px 35px;
+    color: #fafafa;
+    font-size: 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* التأثير عند تمرير الفأرة */
+nav ul ul a:hover {
+    background-color: #34495e;
+    color: #1abc9c;
+    transform: translateX(10px);
+}
+
+/* إظهار القائمة المنسدلة عند المرور */
+nav li:hover > ul {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* تأثير اختفاء القائمة */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* أيقونات الخيارات */
+nav a img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 8px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: grayscale(100%);
+}
+
+nav a:hover img {
+    transform: rotate(20deg) scale(1.2);
+    filter: grayscale(0%);
+}
+
+/* حدود متحركة للقائمة */
+nav ul ul {
+    border: 4px solid #3498db;
+}
+
+/* تحسين عرض الهواتف */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav ul ul {
+        position: static;
+        box-shadow: none;
+    }
+
+    nav ul ul li {
+        padding: 10px;
+    }
+}
+/* تأثير عند التمرير فوق العناصر */
+nav a:hover {
+    background: linear-gradient(45deg, #8e44ad, #1c87c9);
+    transform: scale(1.1); /* تكبير الرابط عند التمرير */
+    color: #f0f0f0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل */
+}
+
+/* تأثير عند التمرير فوق الروابط داخل القائمة المنسدلة */
+nav ul ul a:hover {
+    background-color: #34495e;
+    transform: translateX(10px); /* تحريك الرابط */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* إضافة ظل أثناء التمرير */
+}
+/* إضافة ظل ناعم للروابط */
+nav a {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+}
+
+/* إضافة ظل ناعم للقائمة المنسدلة */
+nav ul ul {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* ظل أقوى للقائمة المنسدلة */
+}
+
+/* دمج تأثير التلاشي مع الانزلاق */
+@keyframes slideFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px); /* تحريك القائمة للأعلى */
+    }
+}
+
+/* تطبيق تأثير التلاشي والانزلاق عند إغلاق القائمة */
+nav ul ul {
+    animation: slideFadeOut 0.3s ease-out forwards;
+}
+
+
+
+/* تنسيق عام لأوقات الدوام */
+/* تنسيق عام لأوقات الدوام */
+#working-hours {
+    background-color: #f9f9f9; /* خلفية فاتحة */
+    padding: 20px;
+    border-radius: 10px; /* حدود دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+    margin: 30px auto;
+    width: 80%; /* العرض 80% */
+    max-width: 900px; /* الحد الأقصى للعرض */
+}
+
+/* تنسيق العنوان */
+#working-hours h2 {
+    text-align: center;
+    font-family: "Readex Pro", sans-serif;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الجدول */
+#working-hours table {
+    width: 100%;
+    border-collapse: collapse; /* دمج الحدود */
+    font-family: "Readex Pro", sans-serif;;
+}
+
+/* تنسيق الخلايا */
+#working-hours th, #working-hours td {
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd; /* حدود ناعمة */
+}
+
+/* تنسيق الأعمدة */
+#working-hours th {
+    background-color: #4CAF50; /* لون خلفية العناوين */
+    color: white;
+    font-weight: bold;
+}
+
+#working-hours td {
+    background-color: #f2f2f2; /* خلفية فاتحة للخلايا */
+}
+
+/* تأثير عند المرور على الصفوف */
+#working-hours tr:hover {
+    background-color: #e0e0e0; /* تغيير الخلفية عند المرور */
+    cursor: pointer;
+}
+
+/* إضافة تأثير عند الضغط على الجدول */
+#working-hours tr:active {
+    background-color: #ccc; /* لون أغمق عند الضغط */
+}
+ { font-size: 10px; /* حجم الأيقونة */
+}
+#working-hours h2 .icon {
+    width: 40px; /* عرض الصورة */
+    height: 40px; /* ارتفاع الصورة */
+    margin-right: 10px; /* مسافة بين الأيقونة والنص */
+    vertical-align: middle; /* محاذاة الصورة مع النص */
+}
+
+
+/* تخصيص الفيديو ليعرض بشكل مناسب لجميع الأجهزة */
+video {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* حواف مستديرة جميلة */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.61); /* إضافة ظل للفيديو */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير الانتقال عند التمرير */
+
+ }
+/* تخصيص لعرض الفيديو بشكل جيد في الأجهزة المحمولة */
+@media (max-width: 768px) {
+    video {
+        max-width: 100%;  /* الفيديو سيشغل عرض الشاشة بالكامل */
+        height: auto;
+    }
+
+
+
+
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* تخصيص حجم الأيقونات في القائمة المنسدلة */
+nav ul ul li img {
+    width: 25px; /* تحديد عرض الأيقونة */
+    height: 25px; /* تحديد ارتفاع الأيقونة */
+    margin-left: 15px; /* ترك مسافة بين النص والأيقونة */
+    vertical-align: middle; /* محاذاة الأيقونة مع النص */
+}
+
+/* تخصيص الأيقونات بشكل عام ليتم تناسقها مع التصميم */
+nav a img {
+    width: 20px;  /* تحديد عرض الأيقونة بشكل ثابت */
+    height: 20px; /* تحديد ارتفاع الأيقونة بشكل ثابت */
+    vertical-align: middle; /* محاذاة الأيقونة مع النص */
+    margin-left: 5px; /* إضافة مسافة بين النص والأيقونة */
+}
+
+./* تخصيص نافذة التقديم */
+/* تخصيص نافذة التقديم */
+.popup {
+    display: none; /* إخفاء النافذة في البداية */
+    position: fixed; /* وضعها في مكان ثابت بالنسبة للنافذة */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة داكنة */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* جعل النافذة فوق باقي المحتوى */
+}
+
+/* محتوى النافذة المنبثقة */
+.popup-content {
+    background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء مع شفافية */
+    padding: 20px;
+    border-radius: 15px; /* حواف مستديرة للمحتوى */
+    max-width: 90%; /* الحد الأقصى للعرض */
+    max-height: 90%; /* الحد الأقصى للارتفاع */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* ظل خفيف حول النافذة */
+}
+
+/* تخصيص الصورة داخل النافذة المنبثقة */
+.popup-content img {
+    max-width: 80%; /* الحد الأقصى للعرض */
+    max-height: 80%; /* الحد الأقصى للارتفاع */
+    width: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 10px; /* حواف مستديرة للصورة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* إضافة ظل للصورة */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات عند التمرير على الصورة */
+}
+
+/* إضافة تأثير التمرير على الصورة */
+.popup-content img:hover {
+    transform: scale(1.05); /* تكبير الصورة قليلاً عند التمرير */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* ظل أقوى عند التمرير */
+}
+
+
+
+/* تكبير الأيقونات في الخيارات الرئيسية */
+nav > ul > li > a > img {
+    width: 40px; /* تكبير الأيقونات الرئيسية */
+    height: 40px;
+    margin-left: 8px; /* مسافة بين النص والأيقونة */
+    vertical-align: middle;
+}
+
+/* تنسيق النافذة المنبثقة */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+.popup img {
+    max-width: 100%;
+    height: auto;
+}
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* خلفية التعتيم */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+
+
+
+
+
+#images-section {
+    display: flex;
+    flex-wrap: wrap; /* لتسمح بترتيب الصور بشكل عمودي على الشاشات الصغيرة */
+    justify-content: center; /* لمركزتها أفقيًا */
+    gap: 10px; /* مسافة بين الصور */
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  #images-section a {
+    flex: 1 1 calc(33.333% - 10px); /* توزيع الصور بالتساوي على 3 أعمدة */
+    max-width: 30%; /* تقييد عرض الصور */
+    text-align: center;
+  }
+  
+  #images-section img {
+    width: 100%; /* الصور تملأ الرابط */
+    height: auto; /* للحفاظ على النسبة بين العرض والارتفاع */
+    border-radius: 10px; /* زوايا مستديرة (اختياري) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف (اختياري) */
+    transition: transform 0.3s; /* تأثير عند التمرير */
+  }
+  
+  #images-section img:hover {
+    transform: scale(1.04); /* تكبير الصورة عند التمرير */
+  }
+  
+  @media (max-width: 768px) { /* تنسيق الهاتف */
+    #images-section a {
+      flex: 1 1 100%; /* الصور تأخذ العرض بالكامل */
+      max-width: 100%; /* نفس التأثير */
+    }
+  }
+  
+
+
+
+
+
+/* تنسيق عام للجسم */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ccddee;
+}
+
+
+
+
+
+
+
+/* خاصية التمرير السلس */
+html {
+    scroll-behavior: smooth;
+  }
+  
+/* تنسيق التذييل */
+footer {
+    background-color: #34495e00;
+    padding: 20px;
+    color: white;
+}
+
+/* حاوية التذييل */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* القسم الأول - تواصل معنا */
+.footer-section {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    background-color:#e32929;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(28, 38, 99, 0.521);
+}
+
+/* تنسيق الشعار */
+.footer-logo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 80px;
+}
+
+/* عنوان الأقسام */
+.footer-section h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+/* تنسيق الأيقونات */
+.social-icons a {
+    color: white;
+    font-size: 45px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #3498db;
+}
+
+/* تنسيق النصوص في القسم الثاني */
+.footer-text {
+    font-size: 25px;
+    color: #ecf0f1;
+}
+
+.footer-text a {
+    color: #ecf0f1;
+    text-decoration: none;
+
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+/* إدارة الموقع */
+.site-management p {
+    font-size: 25px;
+    color: #ecf0f1;
+}
+
+.site-management ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-management ul li {
+    font-size: 25px;
+    color: #ecf0f1;
+    margin: 5px 0;
+}
+
